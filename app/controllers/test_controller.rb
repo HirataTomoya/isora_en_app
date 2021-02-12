@@ -5,4 +5,8 @@ class TestController < ApplicationController
   def answer
 
   end
+
+  def score
+    
+  end
 end

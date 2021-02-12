@@ -13,6 +13,13 @@
  *= require_tree .
  *= require_self
  */
+ @font-face{
+    font-family:"Heart To Diamond Font";
+    src: url('/assets/HEART_to_DIAMOND_font.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .flash{
     padding: 10px 0;
     color: white ;

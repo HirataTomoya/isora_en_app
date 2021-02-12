@@ -3,19 +3,37 @@
 </header>
 
 <main>
-<div class="problem-container">
-    <div class="problem-container__border">
-    <p>1問目</p>
-    <div class="problem-container__border__box">
-        <p>explain</p>
-        <div class="problem-container__border__box__count">
-            <p>3</p>
-        </div>
-    </div>
-    <div class="problem-container__border__btn">
-        <input type="image" src="/answer.png">
+    <div class="problem-container">
+        <div class="problem-container__border">
+            <p>1問目</p>
+            <div class="problem-container__border__box">
+                <p>explain</p>
+                <div class="problem-container__border__box__count">
+                    <p id="counter">3</p>
+                </div>
+            </div>
+            <div class="problem-container__border__btn">
+                <a href="/test/answer/1">
+                    <input type="image" src="/answer.png">
+                </a>
+            </div>
+        </div> 
     </div>
 
-    </div>
-</div>
+    <script type="text/javascript">
+    // タグ内にjavascriptコードを直接記述します。
+    setTimeout(function(){
+    window.location.href = '/test/answer/1';
+    }, 3*1000);
+
+    count = 2; //カウントの初期値
+    timerID = setInterval('countdown()',1000); //1秒毎にcountup()を呼び出し
+
+    function countdown() {
+        document.getElementById("counter").innerText = count; //カウント表示
+        count--; //カウントダウン
+        if (count < 0) countstop(); //カウント終了
+    }
+
+    </script>
 </main>

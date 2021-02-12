@@ -4,10 +4,6 @@
 //
 // 英単語表示画面に関するcss
 //
-@font-face{
-    font-family:"Heart To Diamond Font";
-    src:url("C:/Users/81905/Downloads/HEART_to_DIAMOND_font/HEART to DIAMOND font/HEART_to_DIAMOND_font.otf");
-}
 
 *{
     margin:0;
@@ -166,4 +162,115 @@
 
 .answer-container__border__btn input:hover{
     opacity:0.6;
+}
+
+// 
+// 得点発表画面に関するcss
+// 
+
+.header__test a{
+    color:white;
+    float:right;
+    padding:20px;
+    margin-top:20px
+}
+
+.score-container{
+    border:10px solid #B4A37B;
+    margin:30px 30px 0 30px;
+    background-color:black;
+    position:relative;
+}
+
+.score-container__border{
+    margin:25px 25px 30px 25px;
+    border:4px solid #B4A37B;
+}
+
+.score-container__test{
+    width:130px;
+    position:absolute;
+    left:60px;
+}
+
+.score-container__border p{
+    margin-left:230px;
+    font-size:40px;
+    border-bottom:4px solid #B4A37B;
+    color:white;
+    margin-top:70px;
+    text-align: center;
+    width:400px;
+}
+
+.score-container__border__box{
+    margin:70px 70px 80px 70px;
+    border:4px solid #B4A37B;
+    height:170px;
+    background-color:white;
+}
+
+.score-container__border__box p{
+    font-size:45px;
+    border:none;
+    text-align:left;
+    position:relative;
+    left:140px;
+    top:20px;
+    font-family:"Heart To Diamond Font";
+    color:#B4A37B;
+    margin:0;
+}
+
+.score-container__border__box__score p{
+    font-size:60px;
+    border-bottom:4px dashed #B4A37B;
+    position:relative;
+    left:320px;
+    top:40px;
+    font-family:"Arial";
+    color:black;
+    margin:0;
+    width:75px;
+}
+
+.score-container__border__message{
+    margin:0;
+}
+
+.score-container__border__message p{
+    position:relative;
+    text-align:center;
+    width:840px;
+    font-size:40px;
+    border-bottom:none;
+    color:white;
+    margin:100px 0;
+}
+
+.score-container__border__btn input{
+    margin-left:216px;
+    padding:0;
+    margin-bottom:0;
+}
+
+.score-container__border__btn{
+    margin-bottom:0px;
+}
+
+.score-container__border__btn input:hover{
+    opacity:0.6;
+}
+
+.score-container__border__silva img{
+    margin-left:500px;
+    width:350px;
+    position:relative;
+    
+}
+
+.score-container__border__crack img{
+    position:absolute;
+    top:300px;
+    left:285px;
 }
