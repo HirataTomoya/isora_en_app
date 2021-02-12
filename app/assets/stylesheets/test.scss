@@ -1,0 +1,169 @@
+// Place all the styles related to the Test controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+//
+// 英単語表示画面に関するcss
+//
+@font-face{
+    font-family:"Heart To Diamond Font";
+    src:url("C:/Users/81905/Downloads/HEART_to_DIAMOND_font/HEART to DIAMOND font/HEART_to_DIAMOND_font.otf");
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+
+.header__test{
+    background-color:#4E549C;
+    height:100px;
+    color:white;
+    padding:0px;
+    margin:0px;
+}
+
+.header__test-text{
+    font-family:"Heart To Diamond Font";
+    font-size:60px;
+    color:white;
+    padding:0;
+    margin-left:20px;
+    float:left;
+    line-height:100px;
+}
+
+.problem-container{
+    border:10px solid #B4A37B;
+    margin:30px 30px 0 30px;
+    background-color:black;
+    position:relative;
+}
+
+.problem-container__border{
+    margin:25px 25px 30px 25px;
+    border:4px solid #B4A37B;
+}
+
+.problem-container__border p{
+    font-size:50px;
+    text-align: center;
+    font-family:"Arial";
+    color:white;
+    margin:200px 0 20px 0 ;
+    width:850px;
+}
+
+.problem-container__border__box{
+    margin:0px 70px 80px 70px;
+    border:4px solid #B4A37B;
+    height:180px;
+    background-color:white;
+}
+
+.problem-container__border__box p{
+    font-size:60px;
+    border-bottom:4px solid #B4A37B;
+    text-align: center;
+    font-family:"Arial";
+    color:black;
+    margin:10px 0 0 0 ;
+    padding-bottom:10px;
+    width:695px;
+}
+
+.problem-container__border__box__count p{
+    font-size:60px;
+    border:none;
+    text-align: center;
+    font-family:"Arial";
+    color:black;
+    margin:10px 0 0 0 ;
+    padding-bottom:10px;
+    width:695px;
+}
+
+.problem-container__border__btn input{
+    padding:7px 0;
+    background-color: black;
+    height: 10%;
+}
+
+.problem-container__border__btn{
+    margin: 10%;
+    text-align: center;
+}
+
+.problem-container__border__btn input:hover{
+    opacity:0.6;
+}
+
+//
+// 答え画面に関するcss
+//
+
+.answer-container{
+    border:10px solid #B4A37B;
+    margin:30px 30px 0 30px;
+    background-color:black;
+    position:relative;
+}
+
+.answer-container__border{
+    margin:25px 25px 30px 25px;
+    border:4px solid #B4A37B;
+}
+
+.answer-container__border p{
+    font-size:50px;
+    text-align: center;
+    font-family:"Arial";
+    color:white;
+    margin:200px 0 20px 0 ;
+    width:850px;
+}
+
+.answer-container__border__box{
+    margin:0px 70px 80px 70px;
+    border:4px solid #B4A37B;
+    height:180px;
+    background-color:white;
+}
+
+.answer-container__border__box p{
+    font-size:60px;
+    border-bottom:4px solid #B4A37B;
+    text-align: center;
+    font-family:"Arial";
+    color:black;
+    margin:10px 0 0 0 ;
+    padding-bottom:10px;
+    width:695px;
+}
+
+.answer-container__border__box__answer p{
+    font-size:50px;
+    border:none;
+    text-align: center;
+    font-family:"Arial";
+    color:black;
+    margin:10px 0 0 0 ;
+    padding-bottom:10px;
+    width:695px;
+}
+
+.answer-container__border__btn input{
+    height: 10%;
+    background-color: black;
+    padding:7px 39px;
+    width:340px;
+}
+
+.answer-container__border__btn{
+    text-align: center;
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
+
+.answer-container__border__btn input:hover{
+    opacity:0.6;
+}

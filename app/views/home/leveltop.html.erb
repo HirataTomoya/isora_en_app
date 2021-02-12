@@ -1,0 +1,39 @@
+<header class='level-top'>
+    <p class='level-top__text'>isora wonderland</p>
+    <div class='level-top__link'>
+        <%= link_to("戻る", "/home/top") %>
+    </div>
+</header>
+
+<main>
+<div class="container">
+    <img class="container__test" src="/test.png">
+    <div class="container__border">
+    <p>Stage 1 (1~50)</p>
+    <div class="container__border__box">
+        <p>Score</p>
+        <div class="container__border__box__score">
+            <h1>20点</h1>
+        </div>
+    </div>
+    <div class="container__border__btn">
+        <%= form_tag('') do%>
+            <div class="test-btn">
+                <input type="image" src="/testbtn.png">
+            </div>
+        <% end %>
+        <%= form_tag('') do%>
+            <div class='repeat-test-btn'>
+                <input type="image" src="/reviewtestbtn.png">
+            </div>
+        <% end %>
+        <%= form_tag('') do%>
+            <div class='incorrect-words-btn'>
+                <input type="image" src="/listbtn.png">
+            </div>
+        <% end %>
+    </div>
+    </div>
+</div>
+</main>
+
