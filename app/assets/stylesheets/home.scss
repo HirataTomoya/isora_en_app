@@ -73,8 +73,158 @@ input{
 //
 // level選択画面に関するcss
 //
-.top{
-    color: black    ;
+// .top{
+//     color: black    ;
+// }
+
+.header__menu1{
+    background-color:#4E549C;
+    height:100px;
+    color:white;
+    padding:0px;
+    margin:0px;
+}
+
+.header__menu1-text{
+    font-family:"Heart To Diamond Font";
+    font-size:60px;
+    color:white;
+    padding:0;
+    margin-left:20px;
+    float:left;
+    line-height:100px;
+}
+
+.header__menu1-link{
+    color:white;
+    float:right;
+    padding:20px;
+    margin-top:20px
+}
+
+.menu1__top{
+    position:relative;
+    height:240px;
+}
+
+.menu1__top-img{
+    width:800px;
+    position:absolute;
+    top:30px;
+    margin:0px 90px;
+}
+
+.menu1__top--title-block{
+    text-align: center;
+}
+
+.menu1__top-title{
+    font-family:"Heart To Diamond Font";
+    font-size:70px;
+    border-bottom:4px solid #B4A37B;
+    color:black;
+    position:relative;
+    top:100px;
+    left:350px;
+    width:280px;
+    margin: 0;
+}
+
+.select-big{
+    margin-left:90px;
+    width:980px;
+    height:60px;
+}
+
+.select-big__list{
+    list-style:none;
+    font-size:30px;
+    text-align: center;
+    font-family:"Meiryo UI";
+    width:200px;
+    height:60px;
+    background-color:#DBDEF1;
+    float:left;
+    color:black;
+    line-height:60px;
+}
+
+.select-big__text{
+    list-style:none;
+    font-size:30px;
+    text-align: center;
+    font-family:"Meiryo UI";
+    width:200px;
+    height:60px;
+    float:left;
+    background-color:#5B0CA5;
+    color:white;
+    line-height:60px;
+}
+
+.select-big__link{
+    display:block;
+}
+
+.select-big__link:visited{
+    color:black;
+}
+
+li :hover{
+    background-color:#E9EBF7;
+}
+
+
+.select-small{
+    position:relative;
+    top:60px;
+    left:100px;
+    width:980px;
+    height:600px;
+}
+
+.select-small a{
+    font-size:30px;
+    text-align: center;
+    font-family:"Meiryo UI";
+    width:350px;
+    height:60px;
+    float:left;
+    background-color:#A9B0DF;
+    color:black;
+    line-height:60px;
+    margin:20px;
+    text-decoration-skip-ink: none;
+}
+
+.select-small a:visited{
+    color:black;
+}
+
+.select-small a:hover{
+    background-color:#C2C7E8;
+}
+
+.footer__menu1 img{
+    width:980px;
+}
+
+.select-small__text a{
+    font-size:30px;
+    text-align: center;
+    font-family:"Meiryo UI";
+    width:350px;
+    height:60px;
+    float:left;
+    background-color:#DBB9E9;
+    color:black;
+    line-height:60px;
+    margin:20px;
+    text-decoration-skip-ink: none;
+}
+
+.selet-small__text:hover{
+    background-color:#E7D0F0;
 }
 
 //
