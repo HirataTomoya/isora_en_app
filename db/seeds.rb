@@ -29,6 +29,6 @@ require 'csv'
 # end
 
 CSV.foreach('db/score_seed.csv') do |row|
-  User.create(:user_id => row[0],
+  Score.create(:user_id => row[0],
                     :score_id => row[1])
 end
