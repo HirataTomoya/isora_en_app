@@ -10,13 +10,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_11_060149) do
+ActiveRecord::Schema.define(version: 2021_02_20_052230) do
+
+  create_table "results", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "level_id"
+    t.integer "word_id"
+    t.integer "correct_judgment"
+    t.integer "cumulative_incorrect_number"
+    t.integer "continuous_incorrect_numbere"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "answered"
+    t.integer "practice_id"
+  end
+
+  create_table "scores", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "level_id"
+    t.integer "score"
+    t.integer "trial_number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.integer "user_id"
     t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "continuous_visit_count"
+  end
+
+  create_table "words", force: :cascade do |t|
+    t.integer "word_id"
+    t.string "word_en"
+    t.string "word_jp"
+    t.integer "level_id"
+    t.integer "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "practice_id"
   end
 
 end

@@ -1,48 +1,128 @@
-<%# <h1 class="top">ログイン成功です</h1>
-<%= link_to("ログアウト", "/home/logout") %>
-<%# <%= link_to("レベル1", "/home/leveltop/1") %>   
-
-
 <header class='header__menu1'>
     <p class='header__menu1-text'>isora wonderland</p>
-    <a href="#" class='header__menu1-link'>ログアウト</a>
+    <a href="/home/logout" class='header__menu1-link'>ログアウト</a>
 </header>
 
 <main>
     <div class="menu1__top">
         <img src="/flamex2.png" class='menu1__top-img'>
-        <div>
+        <div class='menu1__top--title-block'>
             <h1 class='menu1__top-title'>Menu</h1>
         </div>
     </div>
     <div class="select-big">
         <span><li class='select-big__text'>1~500</li></span>
-        <li class='select-big__list'><a href="#" class='select-big__link'>501~1000</a></li>
-        <li class='select-big__list'><a href="#" class='select-big__link'>1001~1500</a></li>
-        <li class='select-big__list'><a href="#" class='select-big__link'>1501~2000</a></li>
+        <li class='select-big__list'><a href="/home/menu2" class='select-big__link'>501~1000</a></li>
+        <li class='select-big__list'><a href="/home/menu3" class='select-big__link'>1001~1500</a></li>
+        <li class='select-big__list'><a href="/home/menu4" class='select-big__link'>1501~2000</a></li>
     </div>
     <div class="select-small">
-        <div class="selecr-small__line1">
-            <span class='select-small__text'><a href="#">stage 1 (1~)</a></span>
-            <a href="#">stage 2 (51~)</a>
+        <%# <div class="selecr-small__line1">
+            <a href="/home/leveltop/1" id='stage1' class='stage_element incomplete'>stage 1 (1~)</a>
+            <a href="/home/leveltop/2" id='stage2' class='stage_element incomplete'>stage 2 (51~)</a>
         </div>
         <div class="selecr-small__line2">
-            <a href="#">stage 3 (101~)</a>
-            <a href="#">stage 4 (151~)</a>
+            <a href="/home/leveltop/3" id='stage3' class='stage_element incomplete'>stage 3 (101~)</a>
+            <a href="/home/leveltop/4" id='stage4' class='stage_element incomplete'>stage 4 (151~)</a>
         </div>
         <div class="selecr-small__line3">
-            <a href="#">stage 5 (201~)</a>
-            <a href="#">stage 6 (251~)</a>
+            <a href="/home/leveltop/5" id='stage5' class='stage_element incomplete'>stage 5 (201~)</a>
+            <a href="/home/leveltop/6" id='stage6' class='stage_element incomplete'>stage 6 (251~)</a>
         </div>
         <div class="selecr-small__line4">
-            <a href="#">stage 7 (301~)</a>
-            <a href="#">stage 8 (351~)</a>
+            <a href="/home/leveltop/7" id='stage7' class='stage_element incomplete'>stage 7 (301~)</a>
+            <a href="/home/leveltop/8" id='stage8' class='stage_element incomplete'>stage 8 (351~)</a>
         </div>
         <div class="selecr-small__line5">
-            <a href="#">stage 9 (401~)</a>
-            <a href="#">stage 10 (451~)</a>
+            <a href="/home/leveltop/9" id='stage9' class='stage_element incomplete'>stage 9 (401~)</a>
+            <a href="/home/leveltop/10" id='stage10' class='stage_element incomplete'>stage 10 (451~)</a>
+        </div> %>
+        <div class="selecr-small__line1">
+            <a href="/home/leveltop/1" id='stage1' class='stage_element incomplete'>stage 1 (1~)</a>
+            <a href="/home/leveltop/2" id='stage2' class='stage_element incomplete'>stage 2 (51~)</a>
+        </div>
+        <div class="selecr-small__line2">
+            <a href="/home/leveltop/3" id='stage3' class='stage_element incomplete'>stage 3 (101~)</a>
+            <a href="/home/leveltop/4" id='stage4' class='stage_element incomplete'>stage 4 (151~)</a>
+        </div>
+        <div class="selecr-small__line3">
+            <a href="/home/leveltop/5" id='stage5' class='stage_element incomplete'>stage 5 (201~)</a>
+            <a href="/home/leveltop/6" id='stage6' class='stage_element incomplete'>stage 6 (251~)</a>
+        </div>
+        <div class="selecr-small__line4">
+            <a href="/home/leveltop/7" id='stage7' class='stage_element incomplete'>stage 7 (301~)</a>
+            <a href="/home/leveltop/8" id='stage8' class='stage_element incomplete'>stage 8 (351~)</a>
+        </div>
+        <div class="selecr-small__line5">
+            <a href="#" id='stage9' class='stage_element incomplete'>stage 9 (401~)</a>
+            <a href="#" id='stage10' class='stage_element incomplete'>stage 10 (451~)</a>
         </div>
     </div>
+
+    <script type='text/javascript'>
+        // クリアしたレベルの背景色を変化させる処理
+        var score_stage1 = gon.score_stage1
+        var score_stage2 = gon.score_stage2
+        var score_stage3 = gon.score_stage3
+        var score_stage4 = gon.score_stage4
+        var score_stage5 = gon.score_stage5
+        var score_stage6 = gon.score_stage6
+        var score_stage7 = gon.score_stage7
+        var score_stage8 = gon.score_stage8
+        var score_stage9 = gon.score_stage9
+        var score_stage10 = gon.score_stage10
+        var stage1_element = document.getElementById("stage1");
+        var stage2_element = document.getElementById("stage2");
+        var stage3_element = document.getElementById("stage3");
+        var stage4_element = document.getElementById("stage4");
+        var stage5_element = document.getElementById("stage5");
+        var stage6_element = document.getElementById("stage6");
+        var stage7_element = document.getElementById("stage7");
+        var stage8_element = document.getElementById("stage8");
+        var stage9_element = document.getElementById("stage9");
+        var stage10_element = document.getElementById("stage10");
+        if (score_stage1.score >= 45){
+            stage1_element.classList.add("complete");
+            stage1_element.classList.remove("incomplete");
+        }
+        if (score_stage2.score >= 45){
+            stage2_element.classList.add("complete");
+            stage2_element.classList.remove("incomplete");
+        }
+        if (score_stage3.score >= 45){
+            stage3_element.classList.add("complete");
+            stage3_element.classList.remove("incomplete");
+        }
+        if (score_stage4.score >= 45){
+            stage4_element.classList.add("complete");
+            stage4_element.classList.remove("incomplete");
+        }
+        if (score_stage5.score >= 45){
+            stage5_element.classList.add("complete");
+            stage5_element.classList.remove("incomplete");
+        }
+        if (score_stage6.score >= 45){
+            stage6_element.classList.add("complete");
+            stage6_element.classList.remove("incomplete");
+        }
+        if (score_stage7.score >= 45){
+            stage7_element.classList.add("complete");
+            stage7_element.classList.remove("incomplete");
+        }
+        if (score_stage8.score >= 45){
+            stage8_element.classList.add("complete");
+            stage8_element.classList.remove("incomplete");
+        }
+        if (score_stage9.score >= 45){
+            stage9_element.classList.add("complete");
+            stage9_element.classList.remove("incomplete");
+        }
+        if (score_stage10.score >= 45){
+            stage10_element.classList.add("complete");
+            stage10_element.classList.remove("incomplete");
+        }
+
+    </script>
 
 
 </main>

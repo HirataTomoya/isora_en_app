@@ -1,0 +1,29 @@
+<header class="header__test">
+    <p class="header__test-text">isora wonderland</p>
+</header>
+
+<main>
+    <div class="incorrect-list-container">
+        <div class="incorrect-list-container__border">
+            <p><%= "Stage #{@level} (#{(@level.to_i-1)*50 + 1}~#{@level.to_i*50})"%></p>
+            <div class="incorrect-list-container__border__title">
+                <h1>間違った単語リスト</h1>
+            </div>
+            <div class="incorrect-list-container__border__elist">
+                <% @incorrect_words_en.each do |word_en|%>
+                    <p><%= word_en%></p>
+                <% end %>
+            </div>
+            <div class="incorrect-list-container__border__jlist">
+                <% @incorrect_words_jp.each do |word_jp|%>
+                    <p><%= word_jp%></p>
+                <% end %>
+            </div>
+            <div class="incorrect-list-container__border__btn">
+                <a href="<%= "/home/leveltop/#{@level}"%>">
+                    <input type="image" src="/return.png">
+                </a>
+            </div>
+        </div>
+    </div>
+</main>

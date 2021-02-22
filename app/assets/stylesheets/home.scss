@@ -10,12 +10,12 @@
     padding:0;
 }
 
-header{
+.header__login{
     background-color:black;
     height: 2000px;
 }
 
-h1{
+.header__login--title{
     font-family:"Heart To Diamond Font";
     text-align:center;
     color:white;
@@ -24,23 +24,31 @@ h1{
     margin: 0 auto;
 }
 
-input{
+.header__login--password{
     height:50px;
     font-size:30px;
     margin: 0 auto;
     background-color:#40323C;
     color:white;
     text-align:center;
-
 }
 
-.header__flame1{
+.header__submit-btn{
+    height:50px;
+    font-size:30px;
+    margin: 0 auto;
+    background-color:#40323C;
+    color:white;
+    text-align:center;
+}
+
+.header__login--flame1{
     width: 200px;
     padding:60px 0 0 60px;
     float:left;
 }
 
-.header__flame2{
+.header__login--flame2{
     width: 200px;
     padding:65px 0 0 450px;
 }
@@ -73,9 +81,7 @@ input{
 //
 // level選択画面に関するcss
 //
-// .top{
-//     color: black    ;
-// }
+
 
 .header__menu1{
     background-color:#4E549C;
@@ -127,12 +133,12 @@ input{
     top:100px;
     left:350px;
     width:280px;
-    margin: 0;
+    // margin: 0;
 }
 
 .select-big{
-    margin-left:90px;
-    width:980px;
+    margin:0 90px;
+    width:880px;
     height:60px;
 }
 
@@ -179,22 +185,29 @@ li :hover{
     position:relative;
     top:60px;
     left:100px;
-    width:980px;
+    width:880px;
     height:600px;
 }
 
-.select-small a{
+.stage_element{
     font-size:30px;
     text-align: center;
     font-family:"Meiryo UI";
     width:350px;
     height:60px;
     float:left;
-    background-color:#A9B0DF;
     color:black;
     line-height:60px;
     margin:20px;
-    text-decoration-skip-ink: none;
+    // text-decoration-skip-ink: none;
+}
+
+.complete{
+    background-color:#DBB9E9;
+}
+
+.incomplete{
+    background-color:#A9B0DF;
 }
 
 .select-small a:visited{
@@ -207,20 +220,6 @@ li :hover{
 
 .footer__menu1 img{
     width:980px;
-}
-
-.select-small__text a{
-    font-size:30px;
-    text-align: center;
-    font-family:"Meiryo UI";
-    width:350px;
-    height:60px;
-    float:left;
-    background-color:#DBB9E9;
-    color:black;
-    line-height:60px;
-    margin:20px;
-    text-decoration-skip-ink: none;
 }
 
 .selet-small__text:hover{
@@ -322,7 +321,8 @@ li :hover{
     border-bottom:4px dashed #B4A37B;
     width: 25%;
     position: relative;
-    top: 5 px;
+    left: 260px;
+    top: 20px;
 }
 
 .container__border__box__score{

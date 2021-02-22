@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  level_id: 1
+  word_id: 1
+  correct_judgment: 1
+  cumulative_incorrect_number: 1
+  continuous_incorrect_numbere: 1
+
+two:
+  user_id: 1
+  level_id: 1
+  word_id: 1
+  correct_judgment: 1
+  cumulative_incorrect_number: 1
+  continuous_incorrect_numbere: 1

@@ -1,0 +1,131 @@
+<header class='header__menu1'>
+    <p class='header__menu1-text'>isora wonderland</p>
+    <a href="/home/logout" class='header__menu1-link'>ログアウト</a>
+</header>
+
+<main>
+    <div class="menu1__top">
+        <img src="/flamex2.png" class='menu1__top-img'>
+        <div class='menu1__top--title-block'>
+            <h1 class='menu1__top-title'>Menu</h1>
+        </div>
+    </div>
+    <div class="select-big">
+        <li class='select-big__list'><a href="/home/menu1" class='select-big__link'>1~500</a></li>
+        <li class='select-big__list'><a href="/home/menu2" class='select-big__link'>501~1000</a></li>
+        <span><li class='select-big__text'>1001~1500</li></span>
+        <li class='select-big__list'><a href="/home/menu4" class='select-big__link'>1501~2000</a></li>
+    </div>
+    <div class="select-small">
+        <%# <div class="selecr-small__line1">
+            <a href="/home/leveltop/21" id='stage21' class='stage_element incomplete'>stage 21 (1001~)</a>
+            <a href="/home/leveltop/22" id='stage22' class='stage_element incomplete'>stage 22 (1051~)</a>
+        </div>
+        <div class="selecr-small__line2">
+            <a href="/home/leveltop/23" id='stage23' class='stage_element incomplete'>stage 23 (1101~)</a>
+            <a href="/home/leveltop/24" id='stage24' class='stage_element incomplete'>stage 24 (1151~)</a>
+        </div>
+        <div class="selecr-small__line3">
+            <a href="/home/leveltop/25" id='stage25' class='stage_element incomplete'>stage 25 (1201~)</a>
+            <a href="/home/leveltop/26" id='stage26' class='stage_element incomplete'>stage 26 (1251~)</a>
+        </div>
+        <div class="selecr-small__line4">
+            <a href="/home/leveltop/27" id='stage27' class='stage_element incomplete'>stage 27 (1301~)</a>
+            <a href="/home/leveltop/28" id='stage28' class='stage_element incomplete'>stage 28 (1351~)</a>
+        </div>
+        <div class="selecr-small__line5">
+            <a href="/home/leveltop/29" id='stage29' class='stage_element incomplete'>stage 29 (1401~)</a>
+            <a href="/home/leveltop/30" id='stage30' class='stage_element incomplete'>stage 30 (1451~)</a>
+        </div> %>
+        <div class="selecr-small__line1">
+            <a href="/home/leveltop/21" id='stage21' class='stage_element incomplete'>stage 21 (1001~)</a>
+            <a href="/home/leveltop/22" id='stage22' class='stage_element incomplete'>stage 22 (1051~)</a>
+        </div>
+        <div class="selecr-small__line2">
+            <a href="#" id='stage23' class='stage_element incomplete'>stage 23 (1101~)</a>
+            <a href="#" id='stage24' class='stage_element incomplete'>stage 24 (1151~)</a>
+        </div>
+        <div class="selecr-small__line3">
+            <a href="#" id='stage25' class='stage_element incomplete'>stage 25 (1201~)</a>
+            <a href="#" id='stage26' class='stage_element incomplete'>stage 26 (1251~)</a>
+        </div>
+        <div class="selecr-small__line4">
+            <a href="#" id='stage27' class='stage_element incomplete'>stage 27 (1301~)</a>
+            <a href="#" id='stage28' class='stage_element incomplete'>stage 28 (1351~)</a>
+        </div>
+        <div class="selecr-small__line5">
+            <a href="#" id='stage29' class='stage_element incomplete'>stage 29 (1401~)</a>
+            <a href="#" id='stage30' class='stage_element incomplete'>stage 30 (1451~)</a>
+        </div>
+    </div>
+
+    <script type='text/javascript'>
+        // クリアしたレベルの背景色を変化させる処理
+        var score_stage21 = gon.score_stage21
+        var score_stage22 = gon.score_stage22
+        var score_stage23 = gon.score_stage23
+        var score_stage24 = gon.score_stage24
+        var score_stage25 = gon.score_stage25
+        var score_stage26 = gon.score_stage26
+        var score_stage27 = gon.score_stage27
+        var score_stage28 = gon.score_stage28
+        var score_stage29 = gon.score_stage29
+        var score_stage30 = gon.score_stage30
+        var stage21_element = document.getElementById("stage21");
+        var stage22_element = document.getElementById("stage22");
+        var stage23_element = document.getElementById("stage23");
+        var stage24_element = document.getElementById("stage24");
+        var stage25_element = document.getElementById("stage25");
+        var stage26_element = document.getElementById("stage26");
+        var stage27_element = document.getElementById("stage27");
+        var stage28_element = document.getElementById("stage28");
+        var stage29_element = document.getElementById("stage29");
+        var stage30_element = document.getElementById("stage30");
+        if (score_stage21.score >= 45){
+            stage21_element.classList.add("complete");
+            stage21_element.classList.remove("incomplete");
+        }
+        if (score_stage22.score >= 45){
+            stage22_element.classList.add("complete");
+            stage22_element.classList.remove("incomplete");
+        }
+        if (score_stage23.score >= 45){
+            stage23_element.classList.add("complete");
+            stage23_element.classList.remove("incomplete");
+        }
+        if (score_stage24.score >= 45){
+            stage24_element.classList.add("complete");
+            stage24_element.classList.remove("incomplete");
+        }
+        if (score_stage25.score >= 45){
+            stage25_element.classList.add("complete");
+            stage25_element.classList.remove("incomplete");
+        }
+        if (score_stage26.score >= 45){
+            stage26_element.classList.add("complete");
+            stage26_element.classList.remove("incomplete");
+        }
+        if (score_stage27.score >= 45){
+            stage27_element.classList.add("complete");
+            stage27_element.classList.remove("incomplete");
+        }
+        if (score_stage28.score >= 45){
+            stage28_element.classList.add("complete");
+            stage28_element.classList.remove("incomplete");
+        }
+        if (score_stage29.score >= 45){
+            stage29_element.classList.add("complete");
+            stage29_element.classList.remove("incomplete");
+        }
+        if (score_stage30.score >= 45){
+            stage30_element.classList.add("complete");
+            stage30_element.classList.remove("incomplete");
+        }
+
+    </script>
+
+
+</main>
+<footer class='footer__menu1'>
+    <img src="/background.jpg">
+</footer>

@@ -1,0 +1,21 @@
+<header class="header__test">
+    <p class="header__test-text">isora wonderland</p>
+    <a href="/home/menu1">もどる</a>
+</header>
+
+<main>
+    <div class="after-practice-container">
+        <img class="after-practice-container__test" src="/test.png">
+        <div class="after-practice-container__border">
+            <p><%= "Stage #{@level} (#{(@level.to_i-1)*50 + 1}~#{@level.to_i*50})"%></p>
+            <div class="after-practice-contaner__border__message">
+                <p>練習おつかれさま！</p>
+            </div>
+            <div class="after-practice-container__border__btn">
+                <a href="<%= "/home/leveltop/#{@level}"%>">
+                    <input type="image" src="/return.png">
+                </a>
+            </div>
+        </div>
+    </div>
+</main>

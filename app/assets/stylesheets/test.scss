@@ -4,6 +4,9 @@
 //
 // 英単語表示画面に関するcss
 //
+.test_word{
+    color: white;
+}
 
 *{
     margin:0;
@@ -40,7 +43,7 @@
     border:4px solid #B4A37B;
 }
 
-.problem-container__border p{
+.problem-container__border-text{
     font-size:50px;
     text-align: center;
     font-family:"Arial";
@@ -56,7 +59,7 @@
     background-color:white;
 }
 
-.problem-container__border__box p{
+.problem-container__border__box-text {
     font-size:60px;
     border-bottom:4px solid #B4A37B;
     text-align: center;
@@ -67,30 +70,61 @@
     width:695px;
 }
 
-.problem-container__border__box__count p{
+// .problem-container__border__box__count p{
+//     font-size:60px;
+//     border:none;
+//     text-align: center;
+//     font-family:"Arial";
+//     color:black;
+//     margin:10px 0 0 0 ;
+//     padding-bottom:10px;
+//     width:695px;
+// }
+
+.counter-before {
     font-size:60px;
-    border:none;
+    // border:none;
     text-align: center;
     font-family:"Arial";
     color:black;
     margin:10px 0 0 0 ;
     padding-bottom:10px;
     width:695px;
+    border-bottom:4px solid #B4A37B;
+}
+
+.counter-after {
+    font-size:60px;
+    // border:none;
+    text-align: center;
+    font-family:"Arial";
+    color:black;
+    margin:0px 0 0 0;
+    padding-bottom:0px;
+    width:695px;
+    border-bottom:4px solid #B4A37B;
 }
 
 .problem-container__border__btn input{
-    padding:7px 0;
-    background-color: black;
     height: 10%;
+    background-color: black;
+    padding:7px 39px;
+    width:340px;
 }
 
 .problem-container__border__btn{
-    margin: 10%;
     text-align: center;
+    margin-bottom: 10%;
+    margin-top: 10%;
 }
 
 .problem-container__border__btn input:hover{
     opacity:0.6;
+}
+
+.problem_btn_hide{
+    pointer-events: none;
+    opacity: 0.3;
 }
 
 //
@@ -266,11 +300,266 @@
     margin-left:500px;
     width:350px;
     position:relative;
-    
 }
 
 .score-container__border__crack img{
     position:absolute;
     top:300px;
     left:285px;
+}
+
+//
+// start画面のcss
+//
+
+.start-container{
+    border:10px solid #B4A37B;
+    margin:30px 30px 0 30px;
+    background-color:black;
+    position:relative;
+}
+
+.start-container__border{
+    margin:25px 25px 30px 25px;
+    border:4px solid #B4A37B;
+}
+
+.start-container__text{
+    font-size:50px;
+    text-align: center;
+    font-family:"Arial";
+    color:white;
+    margin:280px 0 20px 0 ;
+    width:850px;
+}
+
+.start-container__border__btn input{
+    margin-left:220px;
+    padding:7px 0;
+    width:410px;
+}
+
+.start-container__border__btn{
+    margin-bottom:155px;
+    margin-top:180px;
+}
+
+.start-container__border__btn input:hover{
+    opacity:0.6;
+}
+
+//
+// practice画面に関するcss
+//
+
+.practice-container{
+    border:10px solid #B4A37B;
+    margin:30px 30px 0 30px;
+    background-color:black;
+    position:relative;
+}
+
+.practice-container__border{
+    margin:25px 25px 30px 25px;
+    border:4px solid #B4A37B;
+}
+
+.practice-container__test{
+    width:130px;
+    position:absolute;
+    left:60px;
+}
+
+.practice-container__border p{
+    margin-left:230px;
+    font-size:40px;
+    border-bottom:4px solid #B4A37B;
+    color:white;
+    margin-top:70px;
+    text-align: center;
+    width:400px;
+}
+
+.practice-contaner__border__message{
+    margin:0;
+}
+
+.practice-contaner__border__message p{
+    position:relative;
+    text-align:center;
+    width:840px;
+    font-size:40px;
+    border-bottom:none;
+    color:white;
+    margin:60px 0;
+}
+
+.practice-container__border__btn input{
+    margin-left:216px;
+    padding:7px 0;
+    margin-bottom:0;
+}
+
+.practice-container__border__btn{
+    margin-bottom:50px;
+}
+
+.practice-container__border__return input{
+    margin-left:280px;
+    padding:7px 0;
+    margin-bottom:0;
+}
+
+.practice-container__border__return {
+    margin-bottom:100px;
+}
+
+
+.practice-container__border__btn input:hover{
+    opacity:0.6;
+}
+
+//
+// 練習終了後の画面
+//
+.after-practice-container{
+    border:10px solid #B4A37B;
+    margin:30px 30px 0 30px;
+    background-color:black;
+    position:relative;
+}
+
+.after-practice-container__border{
+    margin:25px 25px 30px 25px;
+    border:4px solid #B4A37B;
+}
+
+.after-practice-container__test{
+    width:130px;
+    position:absolute;
+    left:60px;
+}
+
+.after-practice-container__border p{
+    margin-left:230px;
+    font-size:40px;
+    border-bottom:4px solid #B4A37B;
+    color:white;
+    margin-top:70px;
+    text-align: center;
+    width:400px;
+}
+
+.after-practice-contaner__border__message{
+    margin:0;
+}
+
+.after-practice-contaner__border__message p{
+    position:relative;
+    text-align:center;
+    width:840px;
+    font-size:40px;
+    border-bottom:none;
+    color:white;
+    margin:100px 0;
+}
+
+.after-practice-container__border__btn input{
+    margin-left:216px;
+    padding:7px 0;
+    margin-bottom:0;
+}
+
+.after-practice-container__border__btn{
+    margin-bottom:100px;
+}
+
+.after-practice-container__border__btn input:hover{
+    opacity:0.6;
+}
+
+//
+// 不正解の単語リスト表示に関するcss
+//
+.incorrect-list-container{
+    border:10px solid #B4A37B;
+    margin:30px 30px 0 30px;
+    background-color:black;
+    position:relative;
+}
+
+.incorrect-list-container__border{
+    margin:25px 25px 30px 25px;
+    border:4px solid #B4A37B;
+}
+
+.incorrect-list-container__border p{
+    margin-left:230px;
+    font-size:40px;
+    border-bottom:4px solid #B4A37B;
+    color:white;
+    margin-top:70px;
+    text-align: center;
+    width:400px;
+}
+
+.incorrect-list-container__border__title{
+    margin:0;
+}
+
+.incorrect-list-container__border__elist p{
+    position:relative;
+    text-align:left;
+    width:400px;
+    font-size:30px;
+    border-bottom:none;
+    color:white;
+    margin:20px 0;
+}
+
+.incorrect-list-container__border__title h1{
+    position:relative;
+    text-align:center;
+    width:840px;
+    font-size:40px;
+    border-bottom:none;
+    color:white;
+    margin:100px 0 0 0;
+}
+
+.incorrect-list-container__border__elist{
+    margin:70px 0 100px 40px;
+    width:400px;
+    float:left;
+}
+
+.incorrect-list-container__border__jlist{
+    margin:70px 0 100px 0px;
+    width:400px;
+    float:left;
+}
+
+.incorrect-list-container__border__jlist p{
+    position:relative;
+    text-align:left;
+    width:550px;
+    font-size:30px;
+    border-bottom:none;
+    color:white;
+    margin:20px 0;
+}
+
+.incorrect-list-container__border__btn input{
+    margin-left:216px;
+    padding:7px 0;
+    margin-bottom:0;
+}
+
+.incorrect-list-container__border__btn{
+    position:relative;
+    margin-bottom:100px;
+}
+
+.incorrect-list-container__border__btn input:hover{
+    opacity:0.6;
 }

@@ -1,13 +1,13 @@
 
-<header>
-    <img class="header__flame1" src="/flame.png">
-    <img class="header__flame2" src="/flame2.png">
+<header class='header__login'>
+    <img class="header__login--flame1" src="/flame.png">
+    <img class="header__login--flame2" src="/flame2.png">
     <div class="header__title">
-        <h1>ISORA WONDERLAND</h1>
+        <h1 class='header__login--title'>ISORA WONDERLAND</h1>
     </div>
     <%= form_tag("/home/login") do%>
         <div class="header__password">
-            <input type="password" name="password">
+            <input type="password" name="password" class='header__login--password'>
         </div>
         <div class="header__submit">
             <input class="header__submit-btn" type="image" src="/login.jpg">

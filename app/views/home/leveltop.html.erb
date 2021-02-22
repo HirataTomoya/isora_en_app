@@ -1,39 +1,44 @@
 <header class='level-top'>
     <p class='level-top__text'>isora wonderland</p>
     <div class='level-top__link'>
-        <%= link_to("戻る", "/home/top") %>
+        <%= link_to("戻る", "/home/menu1") %>
     </div>
 </header>
 
 <main>
-<div class="container">
-    <img class="container__test" src="/test.png">
-    <div class="container__border">
-    <p>Stage 1 (1~50)</p>
-    <div class="container__border__box">
-        <p>Score</p>
-        <div class="container__border__box__score">
-            <h1>20点</h1>
+    <div class="container">
+        <img class="container__test" src="/test.png">
+        <div class="container__border">
+            <p><%= "Stage #{@level} (#{(@level.to_i-1)*50 + 1}~#{@level.to_i*50})"%></p>
+            <div class="container__border__box">
+                <p>Score</p>
+                <div class="container__border__box__score">
+                    <h1><%= @score.score%></h1>
+                </div>
+            </div>
+            <div class="container__border__btn">
+                <div class="practice-btn">
+                    <a href="<%= "/test/practice/#{@level}"%>">
+                        <input type="image" src="/practicebtn.png">
+                    </a>
+                </div>
+                <div class="test-btn">
+                    <a href="<%= "/test/testtop/#{@level}"%>">
+                        <input type="image" src="/testbtn.png">
+                    </a>
+                </div>
+                <div class='repeat-test-btn'>
+                    <a href="<%= "/test/reviewtop/#{@level}"%>">
+                        <input type="image" src="/reviewtestbtn.png">
+                    </a>
+                </div>
+                <div class='incorrect-words-btn'>
+                    <a href="<%= "/test/incorrectlist/#{@level}"%>">
+                        <input type="image" src="/listbtn.png">
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="container__border__btn">
-        <div class="test-btn">
-            <a href="/test/problem/1">
-                <input type="image" src="/testbtn.png">
-            </a>
-        </div>
-        <div class='repeat-test-btn'>
-            <a href="">
-                <input type="image" src="/reviewtestbtn.png">
-            </a>
-        </div>
-        <div class='incorrect-words-btn'>
-            <a href="">
-                <input type="image" src="/listbtn.png">
-            </a>
-        </div>
-    </div>
-    </div>
-</div>
 </main>
 

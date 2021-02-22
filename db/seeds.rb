@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'csv'
+
+CSV.foreach('db/result_seed.csv') do |row|
+  Result.create(:user_id => row[0],
+                    :level_id => row[1],
+                    :word_id => row[2],
+                    :practice_id => row[3])
+end

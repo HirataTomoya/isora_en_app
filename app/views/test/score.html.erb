@@ -1,24 +1,26 @@
 <header class="header__test">
     <p class="header__test-text">isora wonderland</p>
-    <a href="#">もどる</a>
+    <a href="/home/menu1">もどる</a>
 </header>
 
 <main>
     <div class="score-container">
         <img class="score-container__test" src="/test.png">
         <div class="score-container__border">
-            <p>Stage X (xxx~)</p>
+            <p><%= "Stage #{@level} (#{(@level.to_i-1)*50 + 1}~#{@level.to_i*50})"%></p>
             <div class="score-container__border__box">
                 <p>Score</p>
                 <div class="score-container__border__box__score">
-                <p>YY</p>
+                <p><%= @count_correct_words%></p>
                 </div>
             </div>
             <div class="score-container__border__message">
                 <p>おつかれさま！</p>
             </div>
             <div class="score-container__border__btn">
-                <input type="image" src="/listbtn.png">
+                <a href="<%= "/test/incorrectlist/#{@level}"%>">
+                    <input type="image" src="/listbtn.png">
+                </a>
             </div>
             <div class="score-container__border__silva">
                 <img src="/silva.png">
