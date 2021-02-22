@@ -14,16 +14,21 @@ require 'csv'
 #                     :practice_id => row[3])
 # end
 
-CSV.foreach('db/word_seed.csv') do |row|
-  Word.create(:word_id => row[0],
-                    :word_en => row[1],
-                    :word_jp => row[2],
-                    :level_id => row[3],
-                    :category_id => row[4],
-                    :practice_id => row[5])
-end
+# CSV.foreach('db/word_seed.csv') do |row|
+#   Word.create(:word_id => row[0],
+#                     :word_en => row[1],
+#                     :word_jp => row[2],
+#                     :level_id => row[3],
+#                     :category_id => row[4],
+#                     :practice_id => row[5])
+# end
 
-CSV.foreach('db/user_seed.csv') do |row|
+# CSV.foreach('db/user_seed.csv') do |row|
+#   User.create(:user_id => row[0],
+#                     :password => row[1])
+# end
+
+CSV.foreach('db/score_seed.csv') do |row|
   User.create(:user_id => row[0],
-                    :password => row[1])
+                    :score_id => row[1])
 end
