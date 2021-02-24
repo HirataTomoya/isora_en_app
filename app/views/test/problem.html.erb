@@ -8,6 +8,7 @@
             <p class='problem-container__border-text'><%= "#{@problem_number}問目"%></p>
             <div class="problem-container__border__box">
                 <p class='problem-container__border__box-text'><%= @word.word_en%></p>
+                <input id="question" type="hidden" value="<%= @word.word_en%>"/>
                 <div class="problem-container__border__box__count">
                     <p id="counter" class='counter-before'>4</p>
                 </div>
@@ -71,7 +72,8 @@
     <script type='text/javascript'>
         // 発言を作成
         var speak_word = gon.speak_word
-        const uttr = new SpeechSynthesisUtterance(speak_word);
+        var word_en = document.querySelector('#question').value;
+        const uttr = new SpeechSynthesisUtterance(word_en);
         uttr.lang = 'en-US';
         // 発言を再生 (発言キューに発言を追加)
         speechSynthesis.speak(uttr);
