@@ -73,9 +73,10 @@
         // 発言を作成
         var speak_word = gon.speak_word
         var word_en = document.querySelector('#question').value;
-        const uttr = new SpeechSynthesisUtterance(word_en);
+        const uttr = new SpeechSynthesisUtterance();
+        uttr.text = word_en;
         uttr.lang = 'en-US';
         // 発言を再生 (発言キューに発言を追加)
-        speechSynthesis.speak(uttr);
+        window.speechSynthesis.speak(uttr);
     </script>
 </main>
