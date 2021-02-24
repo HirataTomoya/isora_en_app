@@ -40,6 +40,7 @@ class HomeController < ApplicationController
     gon.score_stage8 = score_stage8
     gon.score_stage9 = score_stage9
     gon.score_stage10 = score_stage10
+    gon.user = @current_user
   end
 
   def menu2
