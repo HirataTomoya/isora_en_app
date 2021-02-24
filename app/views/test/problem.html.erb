@@ -10,7 +10,7 @@
                 <p class='problem-container__border__box-text'><%= @word.word_en%></p>
                 <input id="question" type="hidden" value="<%= @word.word_en%>"/>
                 <div class="problem-container__border__box__count">
-                    <p id="counter" class='counter-before'>4</p>
+                    <p id="counter" class='counter-before'>3</p>
                 </div>
             </div>
             <div class="problem-container__border__btn">
@@ -27,7 +27,7 @@
         // window.location.href = href_link;
         // }, 6*1000);
 
-        count = 3; //カウントの初期値
+        count = 2; //カウントの初期値
         const counterID = setInterval('countdown()',1000); //1秒毎にcountup()を呼び出し
 
         function countdown() {
