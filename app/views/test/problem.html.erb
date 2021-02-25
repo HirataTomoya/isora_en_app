@@ -12,6 +12,12 @@
                 <div class="problem-container__border__box__count">
                     <p id="counter" class='counter-before'>3</p>
                 </div>
+                <audio autoplay>
+                    <source src="/Countdown.mp3">
+                </audio>
+                <audio id="sound-file" preload="auto">
+                    <source src="/correct.mp3" type="audio/mp3">
+                </audio>
             </div>
             <div class="problem-container__border__btn">
                 <input type="image" src="/OK.png" onclick="correctbuttonclick()" id='btn1' class='problem_btn_hide'>
@@ -53,8 +59,13 @@
         function  correctbuttonclick() {
             // countstop();
             // clearTimeout(timerID);
-            var href_link_correct = gon.href_link_correct;
-            window.location.href = href_link_correct;
+            document.getElementById( 'sound-file' ).play() ;
+            setTimeout(function(){
+            var href_link = gon.href_link_correct;
+            window.location.href = href_link;
+            }, 1.1*1000);
+            // var href_link_correct = gon.href_link_correct;
+            // window.location.href = href_link_correct;
         }
 
         function incorrectbuttonclick() {

@@ -3,7 +3,7 @@ class TestController < ApplicationController
     @level = params[:level]
     @word = Word.find_by(word_id: params[:word_id])
     # 何問目かを確認する処理
-    @words = Result.where(answered: 0, level_id: params[:level].to_i, user_id: @current_user)
+    @words = Result.where(answered: 0, level_id: params[:level].to_i, user_id: @current_user.user_id)
     @unanswered_questions_number = @words.length
     @problem_number = 51 - @unanswered_questions_number
 
@@ -17,7 +17,7 @@ class TestController < ApplicationController
     @level = params[:level]
     @word = Word.find_by(word_id: params[:word_id])
     # 何問目かを確認する処理
-    @words = Result.where(answered: 0, level_id: params[:level].to_i, user_id: @current_user, correct_judgment: 0)
+    @words = Result.where(answered: 0, level_id: params[:level].to_i, user_id: @current_user.user_id, correct_judgment: 0)
     @unanswered_questions_number = @words.length
     @problem_number = 3 - @unanswered_questions_number
 
@@ -32,7 +32,7 @@ class TestController < ApplicationController
     @practice_id = params[:practice_id]
     @word = Word.find_by(word_id: params[:word_id])
     # 何問目かを確認する処理
-    @words = Result.where(answered: 0, level_id: params[:level].to_i, user_id: @current_user, practice_id: @practice_id.to_i)
+    @words = Result.where(answered: 0, level_id: params[:level].to_i, user_id: @current_user.user_id, practice_id: @practice_id.to_i)
     @unanswered_questions_number = @words.length
     @problem_number = 11 - @unanswered_questions_number
 
@@ -46,7 +46,7 @@ class TestController < ApplicationController
     @level = params[:level]
 
     # 未使用の単語群からランダムに単語を1つ抽出する処理
-    @words = Result.where(answered: 0, level_id: @level.to_i, user_id: @current_user)
+    @words = Result.where(answered: 0, level_id: @level.to_i, user_id: @current_user.user_id)
     if @words == []
       redirect_to('/test/score/' + @level)
     else
@@ -61,7 +61,7 @@ class TestController < ApplicationController
     @level = params[:level]
 
     # 未使用の単語群からランダムに単語を1つ抽出する処理
-    @words = Result.where(answered: 0, level_id: @level.to_i, user_id: @current_user, correct_judgment: 0)
+    @words = Result.where(answered: 0, level_id: @level.to_i, user_id: @current_user.user_id, correct_judgment: 0)
     if @words == []
       redirect_to('/test/reviewfinish/' + @level)
     else
@@ -77,7 +77,7 @@ class TestController < ApplicationController
     @practice_id = params[:practice_id]
 
     # 未使用の単語群からランダムに単語を1つ抽出する処理
-    @words = Result.where(answered: 0, level_id: @level.to_i, user_id: @current_user, practice_id: @practice_id.to_i)
+    @words = Result.where(answered: 0, level_id: @level.to_i, user_id: @current_user.user_id, practice_id: @practice_id.to_i)
     if @words == []
       redirect_to('/test/afterpractice/' + @level)
     else
@@ -93,7 +93,7 @@ class TestController < ApplicationController
     @word = Word.find_by(word_id: params[:word_id])
 
     # 何問目かを確認する処理
-    @words = Result.where(answered: 0, level_id: params[:level].to_i, user_id: @current_user)
+    @words = Result.where(answered: 0, level_id: params[:level].to_i, user_id: @current_user.user_id)
     @unanswered_questions_number = @words.length
     @problem_number = 51 - @unanswered_questions_number
 
@@ -104,7 +104,7 @@ class TestController < ApplicationController
     @word = Word.find_by(word_id: params[:word_id])
 
     # 何問目かを確認する処理
-    @words = Result.where(answered: 0, level_id: params[:level].to_i, user_id: @current_user, correct_judgment: 0)
+    @words = Result.where(answered: 0, level_id: params[:level].to_i, user_id: @current_user.user_id, correct_judgment: 0)
     @unanswered_questions_number = @words.length
     @problem_number = 3 - @unanswered_questions_number
   end
@@ -113,8 +113,8 @@ class TestController < ApplicationController
     @level = params[:level]
 
     # 正当数を記録
-    @count_correct_words = Result.where(correct_judgment: 1, user_id: @current_user).count
-    @score = Score.find_by(user_id: @current_user, level_id: @level)
+    @count_correct_words = Result.where(correct_judgment: 1, user_id: @current_user.user_id).count
+    @score = Score.find_by(user_id: @current_user.user_id, level_id: @level)
     @score.score = @count_correct_words
 
     # 試行回数を記録
@@ -248,7 +248,7 @@ class TestController < ApplicationController
     @level =params[:level]
     @incorrect_words_en = []
     @incorrect_words_jp = []
-    @incorrect_words = Result.where(level_id: @level.to_i, user_id: @current_user, correct_judgment: 0)
+    @incorrect_words = Result.where(level_id: @level.to_i, user_id: @current_user.user_id, correct_judgment: 0)
     @incorrect_words.each do |word|
       incorrect_word = Word.find_by(word_id: word.word_id)
       @incorrect_words_en.push(incorrect_word.word_en)

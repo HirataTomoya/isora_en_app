@@ -57,20 +57,31 @@
             <a href="#" id='stage19' class='stage_element incomplete'>stage 19 (901~)</a>
             <a href="#" id='stage20' class='stage_element incomplete'>stage 20 (951~)</a>
         </div>
+        <input id="stage11_score" type="hidden" value="<%= @score_stage11.score%>"/>
+        <input id="stage12_score" type="hidden" value="<%= @score_stage12.score%>"/>
+        <input id="stage13_score" type="hidden" value="<%= @score_stage13.score%>"/>
+        <input id="stage14_score" type="hidden" value="<%= @score_stage14.score%>"/>
+        <input id="stage15_score" type="hidden" value="<%= @score_stage15.score%>"/>
+        <input id="stage16_score" type="hidden" value="<%= @score_stage16.score%>"/>
+        <input id="stage17_score" type="hidden" value="<%= @score_stage17.score%>"/>
+        <input id="stage18_score" type="hidden" value="<%= @score_stage18.score%>"/>
+        <input id="stage19_score" type="hidden" value="<%= @score_stage19.score%>"/>
+        <input id="stage20_score" type="hidden" value="<%= @score_stage20.score%>"/>
     </div>
 
     <script type='text/javascript'>
         // クリアしたレベルの背景色を変化させる処理
-        var score_stage11 = gon.score_stage11
-        var score_stage12 = gon.score_stage12
-        var score_stage13 = gon.score_stage13
-        var score_stage14 = gon.score_stage14
-        var score_stage15 = gon.score_stage15
-        var score_stage16 = gon.score_stage16
-        var score_stage17 = gon.score_stage17
-        var score_stage18 = gon.score_stage18
-        var score_stage19 = gon.score_stage19
-        var score_stage20 = gon.score_stage20
+        var score_stage11 = document.querySelector('#stage11_score').value;
+        var score_stage12 = document.querySelector('#stage12_score').value;
+        var score_stage13 = document.querySelector('#stage13_score').value;
+        var score_stage14 = document.querySelector('#stage14_score').value;
+        var score_stage15 = document.querySelector('#stage15_score').value;
+        var score_stage16 = document.querySelector('#stage16_score').value;
+        var score_stage17 = document.querySelector('#stage17_score').value;
+        var score_stage18 = document.querySelector('#stage18_score').value;
+        var score_stage19 = document.querySelector('#stage19_score').value;
+        var score_stage20 = document.querySelector('#stage20_score').value;
+
         var stage11_element = document.getElementById("stage11");
         var stage12_element = document.getElementById("stage12");
         var stage13_element = document.getElementById("stage13");
@@ -81,43 +92,43 @@
         var stage18_element = document.getElementById("stage18");
         var stage19_element = document.getElementById("stage19");
         var stage20_element = document.getElementById("stage20");
-        if (score_stage11.score >= 45){
+        if (score_stage11 >= 45){
             stage11_element.classList.add("complete");
             stage11_element.classList.remove("incomplete");
         }
-        if (score_stage12.score >= 45){
+        if (score_stage12 >= 45){
             stage12_element.classList.add("complete");
             stage12_element.classList.remove("incomplete");
         }
-        if (score_stage13.score >= 45){
+        if (score_stage13 >= 45){
             stage13_element.classList.add("complete");
             stage13_element.classList.remove("incomplete");
         }
-        if (score_stage14.score >= 45){
+        if (score_stage14 >= 45){
             stage14_element.classList.add("complete");
             stage14_element.classList.remove("incomplete");
         }
-        if (score_stage15.score >= 45){
+        if (score_stage15 >= 45){
             stage15_element.classList.add("complete");
             stage15_element.classList.remove("incomplete");
         }
-        if (score_stage16.score >= 45){
+        if (score_stage16 >= 45){
             stage16_element.classList.add("complete");
             stage16_element.classList.remove("incomplete");
         }
-        if (score_stage17.score >= 45){
+        if (score_stage17 >= 45){
             stage17_element.classList.add("complete");
             stage17_element.classList.remove("incomplete");
         }
-        if (score_stage18.score >= 45){
+        if (score_stage18 >= 45){
             stage18_element.classList.add("complete");
             stage18_element.classList.remove("incomplete");
         }
-        if (score_stage19.score >= 45){
+        if (score_stage19 >= 45){
             stage19_element.classList.add("complete");
             stage19_element.classList.remove("incomplete");
         }
-        if (score_stage20.score >= 45){
+        if (score_stage20 >= 45){
             stage20_element.classList.add("complete");
             stage10_element.classList.remove("incomplete");
         }
