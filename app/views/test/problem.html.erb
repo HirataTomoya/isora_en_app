@@ -78,12 +78,21 @@
     </script>
     <script type='text/javascript'>
         // 発言を作成
+
+        // var speak_word = gon.speak_word
+        // var word_en = document.querySelector('#question').value;
+        // const uttr = new SpeechSynthesisUtterance();
+        // uttr.text = word_en;
+        // uttr.lang = 'en-US';
+        // 発言を再生 (発言キューに発言を追加)
+        // window.speechSynthesis.speak(uttr);
+        setTimeout(function(){
         var speak_word = gon.speak_word
         var word_en = document.querySelector('#question').value;
         const uttr = new SpeechSynthesisUtterance();
         uttr.text = word_en;
         uttr.lang = 'en-US';
-        // 発言を再生 (発言キューに発言を追加)
         window.speechSynthesis.speak(uttr);
+        }, 3*1000);
     </script>
 </main>
