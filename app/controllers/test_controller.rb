@@ -128,7 +128,7 @@ class TestController < ApplicationController
   end
 
   def reviewfinish
-
+    @level = params[:level]
   end
 
   def testtop
@@ -190,9 +190,9 @@ class TestController < ApplicationController
     word.save
 
     # 正解を記録する処理
-    result = Result.find_by(word_id: params[:word_id])
-    result.correct_judgment = 1
-    result.save
+    # result = Result.find_by(word_id: params[:word_id])
+    # result.correct_judgment = 1
+    # result.save
 
     level = params[:level]
     redirect_to('/test/extract/review/' + level)
@@ -205,9 +205,9 @@ class TestController < ApplicationController
     word.save
 
     # 不正解を記録する処理
-    result = Result.find_by(word_id: params[:word_id])
-    result.correct_judgment = 0
-    result.save
+    # result = Result.find_by(word_id: params[:word_id])
+    # result.correct_judgment = 0
+    # result.save
 
     level = params[:level]
     redirect_to('/test/extract/review/' + level)

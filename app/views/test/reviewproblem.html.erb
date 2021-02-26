@@ -9,24 +9,26 @@
             <div class="problem-container__border__box">
                 <p class='problem-container__border__box-text'><%= @word.word_en%></p>
                 <div class="problem-container__border__box__count">
-                    <p id="counter" class='counter-before'>4</p>
+                    <p id="counter" class='counter-before'>3</p>
                 </div>
+                <audio autoplay>
+                    <source src="/Countdown.mp3">
+                </audio>
+                <audio id="sound-file" preload="auto">
+                    <source src="/correct.mp3" type="audio/mp3">
+                </audio>
             </div>
             <div class="problem-container__border__btn">
-                <input type="image" src="/OK.png" onclick="correctbuttonclick()" id='btn1'>
-                <input type="image" src="/notOK.png" onclick="incorrectbuttonclick()" id='btn2'>
+                <input type="image" src="/OK.png" onclick="correctbuttonclick()" id='btn1' class='problem_btn_hide'>
+                <input type="image" src="/notOK.png" onclick="incorrectbuttonclick()" id='btn2' class='problem_btn_hide'>
             </div>
         </div>
     </div>
 
     <script type="text/javascript">
         // タグ内にjavascriptコードを直接記述します。
-        const timerID = setTimeout(function(){
-        var href_link = gon.href_link_review_incorrect;
-        window.location.href = href_link;
-        }, 6*1000);
 
-        count = 3; //カウントの初期値
+        count = 2; //カウントの初期値
         const counterID = setInterval('countdown()',1000); //1秒毎にcountup()を呼び出し
 
         function countdown() {
@@ -43,28 +45,23 @@
             var element_btn2 = document.getElementById('btn2');
             var element_jp = document.getElementById('counter');
             element.innerText = word_jp;
-            element_btn1.classList.add('problem_btn_hide');
-            element_btn2.classList.add('problem_btn_hide');
+            element_btn1.classList.remove('problem_btn_hide');
+            element_btn2.classList.remove('problem_btn_hide');
             element_jp.classList.remove('counter-before');
             element_jp.classList.add('counter-after');
         }
 
         function  correctbuttonclick() {
-            countstop();
-            clearTimeout(timerID);
-            setTimeout(function () {
-                var href_link_correct = gon.href_link_review_correct;
-                window.location.href = href_link_correct;
-            }, 1*1000);
+            document.getElementById( 'sound-file' ).play() ;
+            setTimeout(function(){
+            var href_link = gon.href_link_review_correct;
+            window.location.href = href_link;
+            }, 1.1*1000);
         }
 
         function incorrectbuttonclick() {
-            countstop();
-            clearTimeout(timerID);
-            setTimeout(function () {
-                var href_link_incorrect = gon.href_link_review_incorrect;
-                window.location.href = href_link_incorrect;
-            }, 1*1000);
+            var href_link_incorrect = gon.href_link_review_incorrect;
+            window.location.href = href_link_incorrect;
         }
 
     </script>

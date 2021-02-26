@@ -1,1 +1,33 @@
-<a href="<%= "/home/menu1"%>">復習終わり</a>
+<header class="header__test">
+    <p class="header__test-text">isora wonderland</p>
+    <a href="/home/menu1">もどる</a>
+</header>
+
+<main>
+    <div class="container">
+        <img class="after-practice-container__test" src="/test.png">
+        <div class="after-practice-container__border">
+            <p><%= "Stage #{@level} (#{(@level.to_i-1)*50 + 1}~#{@level.to_i*50})"%></p>
+            <div class="after-practice-contaner__border__message">
+                <p>復習テストおつかれさま！</p>
+            </div>
+            <div class="container__border__btn">
+                <div class="test-btn">
+                    <a href="<%= "/test/testtop/#{@level}"%>">
+                        <input type="image" src="/testbtn.png">
+                    </a>
+                </div>
+                <div class='repeat-test-btn'>
+                    <a href="<%= "/test/reviewtop/#{@level}"%>">
+                        <input type="image" src="/reviewtestbtn.png">
+                    </a>
+                </div>
+                <div class='incorrect-words-btn'>
+                    <a href="<%= "/test/incorrectlist/#{@level}"%>">
+                        <input type="image" src="/listbtn.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
