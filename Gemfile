@@ -63,7 +63,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'gon'
-em "refile", require: "refile/rails", github: 'manfe/refile'
+gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 # group :production do
 #   gem 'pg'
