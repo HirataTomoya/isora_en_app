@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
     before_action :set_current_user
-    before_action :authenticate_user, {only: [:top]}
+    before_action :authenticate_user, {only: [:top, :menu1, :menu2, :menu3, :menu4, :leveltop, :problem, :reviewproblem, :practiceproblem, :extractword, :reviewword, :practiceword, :answer, :reviewanswer, :score, :reviewfinish, :testtop, :practicetop, :correct, :incorrect, :reviewcorrect, :reviewincorrect, :practicecorrect, :practiceincorrect, :practice, :afterpractice, :incorrectlist]}
     before_action :forbid_login_user, {only: [:loginform, :login]}
 
     def set_current_user
