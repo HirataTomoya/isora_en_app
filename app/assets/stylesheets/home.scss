@@ -16,12 +16,17 @@
 }
 
 .header__login--title{
-    font-family:"Heart To Diamond Font";
-    text-align:center;
-    color:white;
-    font-size:80px;
-    width:60%;
-    margin: 0 auto;
+    // font-family:"Heart To Diamond Font";
+    // text-align:center;
+    // color:white;
+    // font-size:80px;
+    // width:60%;
+    // margin: 0 auto;
+    text-align: center;
+    color: white;
+    margin-right: 100px;
+    margin-left: 100px;
+    height: 180px;
 }
 
 .header__login--password{
@@ -96,9 +101,10 @@
     font-size:60px;
     color:white;
     padding:0;
-    margin-left:20px;
+    margin:20px;
     float:left;
     line-height:100px;
+    height: 60px;
 }
 
 .header__menu1-link{
@@ -127,12 +133,13 @@
 .menu1__top-title{
     font-family:"Heart To Diamond Font";
     font-size:70px;
-    border-bottom:4px solid #B4A37B;
+    // border-bottom:4px solid #B4A37B;
     color:black;
     position:relative;
     top:100px;
-    left:350px;
-    width:280px;
+    left:10px;
+    // width:280px;
+    height: 95px;
     // margin: 0;
 }
 
