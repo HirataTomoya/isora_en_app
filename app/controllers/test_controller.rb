@@ -113,7 +113,7 @@ class TestController < ApplicationController
     @level = params[:level]
 
     # 正当数を記録
-    @count_correct_words = Result.where(correct_judgment: 1, user_id: @current_user.user_id).count
+    @count_correct_words = Result.where(correct_judgment: 1, user_id: @current_user.user_id, level_id: @level).count
     @score = Score.find_by(user_id: @current_user.user_id, level_id: @level)
     @score.score = @count_correct_words
 
