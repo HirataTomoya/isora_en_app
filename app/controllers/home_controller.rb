@@ -8,7 +8,7 @@ class HomeController < ApplicationController
       session[:user_id] = @user.user_id
       redirect_to("/home/menu1")
     else
-      redirect_to("/home/loginform")
+      redirect_to("/")
       flash[:notice] = "パスワードが間違っています"
     end
   end
