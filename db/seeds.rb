@@ -35,7 +35,7 @@ require 'csv'
 #                     :level_id => row[1])
 # end
 
-CSV.foreach('db/word_seed_0.csv') do |row|
+CSV.foreach('db/word_seed_1.csv') do |row|
   Word.create(:word_id => row[0],
                     :word_en => row[1],
                     :word_jp => row[2],
