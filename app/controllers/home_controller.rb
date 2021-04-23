@@ -4,6 +4,8 @@ class HomeController < ApplicationController
 
   def login
     @user = User.find_by(password: params[:password])
+    puts params[:password]
+    puts @user
     if @user
       session[:user_id] = @user.user_id
       redirect_to("/home/menu1")
